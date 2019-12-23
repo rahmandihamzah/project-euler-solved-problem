@@ -1,5 +1,6 @@
 let result;
 let temp;
+let temp1 = 0;
 let isPal = '';
 
 let i = 100;
@@ -16,7 +17,10 @@ while (status) {
                     isPal += temp.toString()[i];
                 }
                 if (isPal.toString() === temp.toString()) {
-                    result = `${i} X ${j} == ${temp}`;
+                    if (temp > temp1) {
+                        temp1 = temp;
+                        result = `${i} X ${j} = ${temp1}`;
+                    }
                 }
                 console.log(temp);
             } else {
